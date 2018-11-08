@@ -1,0 +1,98 @@
+//Widescreen
+@include mediaXl {
+  .projects {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+//Desktop & Laptop
+@include mediaLg {
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+//Tablet & Small Laptops
+@include mediaMd {
+  main {
+    align-items: center;
+    text-align: center;
+
+    .lgHeading {
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+  }
+
+  ul.menuNav,
+  div.menuBranding {
+    float: none;
+    width: 100%;
+    min-height: 0;
+
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .menuNav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 20px;
+  }
+
+  .menuBranding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0);
+
+    .portrait {
+      background: url(../img/portrait.jpg);
+      background-size: cover;
+      width: 20vh;
+      height: 20vh;
+    }
+  }
+
+  .aboutInfo {
+    grid-template-areas:
+      "bioImg"
+      "bio"
+      "job1"
+      "job2"
+      "job3";
+    grid-template-columns: 1fr;
+  }
+
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+//Smartphone
+@include mediaSm {
+  main {
+    padding: 2rem;
+    #home h1 {
+      margin-top: 10vh;
+    }
+
+    .lgHeading {
+      margin-top: 1rem;
+      font-size: 5rem;
+    }
+  }
+
+  main#home h1 {
+    margin-top: 10vh;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+  }
+
+  .boxes {
+    div {
+      font-size: 6vw;
+    }
+  }
+}
