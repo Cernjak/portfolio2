@@ -4,13 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
   },
   "keywords": [],
   "author": "Igor Cernjak",
-  "homepage": "https://cernjak.github.io/siteName",
+  "homepage": "https://cernjak.github.io/portfolio",
   "license": "ISC",
   "dependencies": {
-    "gh-pages": "^2.0.1"
+    "gh-pages": "^2.0.1",
+    "node-sass": "^4.11.0"
   }
 }
